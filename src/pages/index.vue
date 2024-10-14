@@ -4,6 +4,6 @@
 </script>
 
 <template>
-  <h1 class="text-indigo-500 text-xl font-bold">Page d'accueil</h1>
+  <h1 class="text-indigo-500 text-xl font-bold">Accueil Portfolio</h1>
   
 </template>
