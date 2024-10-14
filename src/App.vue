@@ -11,6 +11,7 @@ import  LogInOut from '@/components/LogInOut.vue'
   <UL>
     <RouterLink to="/">Accueil</RouterLink>
     <RouterLink to="/About">About</RouterLink>
+    <RouterLink to="/projets">Projets</RouterLink>
   </UL>
  </NAV>
  <main>
