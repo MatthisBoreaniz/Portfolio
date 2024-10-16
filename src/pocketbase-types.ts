@@ -36,6 +36,7 @@ export type AuthSystemFields<T = never> = {
 
 export type ProjetsRecord = {
 	description?: HTMLString
+	image?: string
 	titre?: string
 }
 
