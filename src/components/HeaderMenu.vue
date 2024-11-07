@@ -41,7 +41,7 @@ const toggleMenu = () => {
         </li>
       </ul>
     </div>
-    <div :class="{ 'block': isActiveMenu, 'hidden': !isActiveMenu }" class="lg:hidden absolute left-0 right-0 w-full z-10 p-5 bg-black" style="top: 100%; margin-left: 0px; height: calc(100vh - 100%);">
+    <div v-scroll-lock="isActiveMenu" :class="{ 'block': isActiveMenu, 'hidden': !isActiveMenu }" class="lg:hidden absolute left-0 right-0 w-full z-10 p-5 bg-black" style="top: 100%; margin-left: 0px; height: calc(100vh - 100%);">
       <ul class="font-calistoga text-white flex flex-col items-center justify-center space-y-20 my-auto">
       <li class="mt-20" >
         <router-link @click.prevent="isActiveMenu = false" to="/">Projets</router-link>
