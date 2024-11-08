@@ -12,11 +12,11 @@ const toggleMenu = () => {
 <template>
   <nav class="flex items-center lg:justify-between justify-between space-x-5 lg:p-5 lg-w-full mx-auto w-full p-3 lg:rounded-none relative">
     <div>
-      <RouterLink to="/"><img src="../assets/Img/maison.png" alt="Logo Du Site" class="w-10 h-10" /></RouterLink>
+      <RouterLink to="/"><img src="../assets/Img/maison.png" alt="Logo Du Site" class="w-10 h-10 ml-10" /></RouterLink>
     </div>
 
     <div class="mr-10 lg:hidden">
-      <button @click="toggleMenu" class="relative h-8 w-8 focus:outline-none">
+      <button @click="toggleMenu" class="relative h-8 w-8 focus:outline-none mr-10">
         <span
           :class="{ 'rotate-45': isActiveMenu, 'translate-y-2': !isActiveMenu }"
           class="absolute block h-1 w-full transform bg-white transition duration-300 ease-in-out"
@@ -24,12 +24,12 @@ const toggleMenu = () => {
         <span
           :class="{ '-rotate-45': isActiveMenu, '-translate-y-2': !isActiveMenu }"
           class="absolute block h-1 w-full transform bg-white transition duration-300 ease-in-out"
-        ></span>
+        ></span> 
       </button>
     </div>
 
     <div class="hidden lg:block">
-      <ul class="font-calistoga text-white lg:flex lg:space-x-10 lg:text-base">
+      <ul class="font-calistoga text-white lg:flex lg:space-x-20 lg:text-sm">
         <li>
           <router-link @click.prevent="isActiveMenu = false" to="/">Projets</router-link>
         </li>
@@ -37,7 +37,7 @@ const toggleMenu = () => {
           <router-link @click.prevent="isActiveMenu = false" to="/">Contact</router-link>
         </li>
         <li>
-          <router-link @click.prevent="isActiveMenu = false" to="/">À propos</router-link>
+          <router-link class="mr-10" @click.prevent="isActiveMenu = false" to="/">À propos</router-link>
         </li>
       </ul>
     </div>

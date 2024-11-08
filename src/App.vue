@@ -3,7 +3,7 @@
 </script>
 
   <template>
-  <main>
+  <main class="">
     <RouterView v-slot="{ Component }">
       <Suspense>
         <component :is="Component" :key="$route.path" />

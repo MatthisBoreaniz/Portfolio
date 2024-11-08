@@ -9,7 +9,7 @@
   class="opacity-10"
   preserveAspectRatio="none"
 >
-  <ellipse
+  <ellipse 
     opacity="0.1"
     cx="1038.79"
     cy="-73.8134"

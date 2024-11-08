@@ -3,3 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bg-animate {
+    background: linear-gradient(196.1deg, #000 24.6%, #3f28f2 85.59%);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 8s ease infinite;
+}
+
+
+
