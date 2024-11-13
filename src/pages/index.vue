@@ -70,7 +70,7 @@ import Elipse from '@/components/Elipse.vue'
       <div class="my-24">
         <div class="flex justify-center space-x-16 pb-8">
           <div class="group relative hover:scale-110 transition-transform duration-300">
-            <img class="h-[150px]" src="../assets/Img/css-3 1.png" alt="CSS" />
+            <img class="h-[100px] lg:h-[150px]" src="../assets/Img/css-3 1.png" alt="CSS" />
             <div
               class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
@@ -78,7 +78,7 @@ import Elipse from '@/components/Elipse.vue'
             </div>
           </div>
           <div class="group relative hover:scale-110 transition-transform duration-300">
-            <img class="h-[150px]" src="../assets/Img/html-1 2.png" alt="HTML" />
+            <img class="h-[100px] lg:h-[150px]" src="../assets/Img/html-1 2.png" alt="HTML" />
             <div
               class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
@@ -86,7 +86,7 @@ import Elipse from '@/components/Elipse.vue'
             </div>
           </div>
           <div class="group relative hover:scale-110 transition-transform duration-300">
-            <img class="h-[150px]" src="../assets/Img/javascript-1 1.png" alt="JS" />
+            <img class="h-[100px] lg:h-[150px]" src="../assets/Img/javascript-1 1.png" alt="JS" />
             <div
               class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
@@ -96,7 +96,7 @@ import Elipse from '@/components/Elipse.vue'
         </div>
         <div class="flex justify-center space-x-16">
           <div class="group relative hover:scale-110 transition-transform duration-300">
-            <img class="h-[150px]" src="../assets/Img/icons8-wordpress 1.png" alt="WORDPRESS" />
+            <img class="h-[100px] lg:h-[150px]" src="../assets/Img/icons8-wordpress 1.png" alt="WORDPRESS" />
             <div
               class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
@@ -104,7 +104,7 @@ import Elipse from '@/components/Elipse.vue'
             </div>
           </div>
           <div class="group relative hover:scale-110 transition-transform duration-300">
-            <img class="h-[150px]" src="../assets/Img/vue-js 1.png" alt="VUEJS" />
+            <img class="h-[100px] lg:h-[150px]" src="../assets/Img/vue-js 1.png" alt="VUEJS" />
             <div
               class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
@@ -114,7 +114,7 @@ import Elipse from '@/components/Elipse.vue'
         </div>
         <div class="flex justify-center">
           <div class="group relative hover:scale-110 transition-transform duration-300">
-            <img class="h-[150px]" src="../assets/Img/SQL.png" alt="SQL" />
+            <img class="h-[100px] lg:h-[150px]" src="../assets/Img/SQL.png" alt="SQL" />
             <div
               class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
