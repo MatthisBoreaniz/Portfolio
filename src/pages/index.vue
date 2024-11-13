@@ -64,6 +64,23 @@ import Elipse from '@/components/Elipse.vue'
         </p>
       </div>
       </div>
+
+
+        <div class="my-24">
+          <div class="flex space-x-16 justify-center pb-8">
+            <img class="h-[150px]" src="../assets/Img/css-3 1.png" alt="CSS">
+            <img class="h-[150px]" src="../assets/Img/html-1 2.png" alt="HTML">
+            <img class="h-[150px]" src="../assets/Img/javascript-1 1.png" alt="JS">
+          </div>
+          <div class="flex space-x-16 justify-center">
+            <img class="h-[150px]" src="../assets/Img/icons8-wordpress 1.png" alt="WORDPRESS">
+            <img class="h-[150px]" src="../assets/Img/vue-js 1.png" alt="VUEJS">
+          </div>
+          <div class="flex justify-center">
+            <img class="h-[150px]" src="../assets/Img/SQL.png" alt="SQL">
+          </div>
+        </div>
     </section>
+
   </div>
 </template>
