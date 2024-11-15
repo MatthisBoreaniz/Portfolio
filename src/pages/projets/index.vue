@@ -1,9 +1,9 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { pb } from '@/backend';
+import cardProjet from '@/components/cardProjet.vue';
 
-
-const listProjets = await pb.collection('projets').getFullList()
+const listProjets = await pb.collection('projets').getFullList();
 </script>
 
 <template>
@@ -11,7 +11,9 @@ const listProjets = await pb.collection('projets').getFullList()
 <div>
 
     <h1>Les projets </h1>
-        <p v-for="unProjet in listProjets" :key="unProjet.id">{{ unProjet.titre }}</p>
+        <div v-for="unProjet in listProjets" :key="unProjet.id">
+            <cardProjet v-bind="unProjet" />
+        </div>
    
 </div>
 

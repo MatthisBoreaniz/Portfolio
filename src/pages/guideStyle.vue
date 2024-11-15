@@ -34,7 +34,14 @@ import CardProjetCarousel from '@/components/cardProjetCarousel.vue'
       v-for="unProjet in projetslist"
       :key="unProjet.id"
     >
-      <CardProjetCarousel v-bind="unProjet" class="object-cover w-full h-full" />
+      <RouterLink :to="
+        {
+          name: '/projets/[id]',
+          params: { id: unProjet.id }
+        }
+      ">
+        <CardProjetCarousel v-bind="unProjet" class="object-cover w-full h-full" />
+      </RouterLink>
     </div>
   </div>
 </div>

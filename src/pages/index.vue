@@ -140,7 +140,9 @@ import cardProjet from '@/components/cardProjet.vue'
               v-for="unProjet in projetslist"
               :key="unProjet.id"
             >
+            <RouterLink :to="{ name: '/projets/[id]', params: { id: unProjet.id } }">
               <CardProjetCarousel v-bind="unProjet" class="h-full w-full object-cover  z-10  " />
+            </RouterLink>
             </div>
           </div>
         </div>
@@ -163,7 +165,10 @@ import cardProjet from '@/components/cardProjet.vue'
       </div>
 
       <div class="flex flex-wrap justify-center lg:hidden" v-for="projet in projetslist" :key="projet.id" >
+        <RouterLink :to="{ name: '/projets/[id]', params: { id: projet.id } }">
+          
         <cardProjet v-bind="projet" />
+        </RouterLink>
       </div>
     </section>
   </div>
