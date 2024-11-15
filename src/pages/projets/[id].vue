@@ -12,7 +12,7 @@ const Projets = await pb.collection('projets').getOne(route.params.id)
 <template>
     <div class="bg-animate h-screen">
         <HeaderMenu />
-        <h1 class="font-calistoga text-white text-xl text-center justify-center"> Voici le projet {{ Projets.titre }}</h1>
+        <h1 class="font-calistoga text-white text-xl text-center"> Voici le projet {{ Projets.titre }}</h1>
 
 
     </div>
