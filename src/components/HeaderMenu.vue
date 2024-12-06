@@ -12,7 +12,7 @@ const toggleMenu = () => {
 <template>
   <nav class="flex items-center lg:justify-between justify-between space-x-5 lg:p-5 lg-w-full mx-auto w-full p-3 lg:rounded-none relative">
     <div>
-      <RouterLink to="/"><img src="../assets/Img/maison.png" alt="Logo Du Site" class="w-10 h-10 ml-10" /></RouterLink>
+      <RouterLink to="/"><p class="font-calistoga mx-10 text-base text-white ">MB</p></RouterLink>
     </div>
 
     <div class="mr-10 lg:hidden">
