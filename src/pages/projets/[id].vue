@@ -30,6 +30,5 @@ const Projets = await pb.collection('projets').getOne(route.params.id)
     <div class="p-10 w-2/3 font-calistoga text-white" v-html="sanitizeHtml(Projets.description2)"></div>
     <div class="p-10 w-2/3 font-calistoga text-white" v-html="sanitizeHtml(Projets.description3)"></div>
 
-      
   </div>
 </template>
