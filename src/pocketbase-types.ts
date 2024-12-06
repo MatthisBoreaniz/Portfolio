@@ -40,6 +40,9 @@ export type ProjetsRecord = {
 	description3?: HTMLString
 	image?: string
 	logo?: string
+	photo1?: string
+	photo2?: string
+	photo3?: string
 	titre?: string
 }
 
