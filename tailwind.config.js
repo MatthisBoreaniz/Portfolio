@@ -38,5 +38,5 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('tailwind-hamburgers')
-  ]
+  ]   
 }
