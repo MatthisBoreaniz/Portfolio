@@ -46,65 +46,40 @@ const submitForm = async () => {
   }
 }
 </script>
+
 <template>
   <div class="min-h-screen bg-black">
     <HeaderMenu />
 
-    <div class="flex w-full flex-col">
-      <div class="flex items-center">
-        <h1
-          class="inline-block whitespace-nowrap rounded-r-3xl bg-DeepBlue p-5 font-calistoga text-xl text-white"
-        >
+    <div class="flex w-full flex-col p-4">
+      <div class="flex items-center mb-4">
+        <h1 class="inline-block whitespace-nowrap rounded-r-3xl bg-DeepBlue p-5 font-calistoga lg:text-lg text-base text-white">
           Contactez moi
         </h1>
         <div class="h-1 w-full bg-white"></div>
       </div>
-      <section class=" flex justify-center gap-10 ">
-        <div class=" flex flex-col justify-center items-center">
+      <section class="flex flex-col lg:flex-row justify-center gap-10">
+        <div class="flex flex-col justify-center items-center mb-10 lg:mb-0">
           <h2 class="font-calistoga text-base text-white py-10">via mes réseaux </h2>
           <div>
             <ul class="flex flex-col items-center justify-center space-y-5">
               <li class="flex items-center justify-center space-x-3">
-                <img
-                  class="h-[50px] w-[50px]"
-                  src="/src/assets/Img/DossierIcons/icons8-linkedin 1.png"
-                  alt="LinkedinIcon"
-                />
-                <a
-                  href="https://www.linkedin.com/in/matthis-boreaniz-70879a281/"
-                  class="font-calistoga text-sm text-white"
-                  >MatthisBoreaniz</a
-                >
+                <img class="h-[50px] w-[50px]" src="/src/assets/Img/DossierIcons/icons8-linkedin 1.png" alt="LinkedinIcon" />
+                <a href="https://www.linkedin.com/in/matthis-boreaniz-70879a281/" class="font-calistoga text-sm text-white">MatthisBoreaniz</a>
               </li>
               <li class="flex items-center justify-center space-x-3">
-                <img
-                  class="h-[50px] w-[50px]"
-                  src="/src/assets/Img/DossierIcons/icons8-github 1.png"
-                  alt="GithubIcon"
-                />
-                <a
-                  href="https://github.com/MatthisBoreaniz"
-                  class="font-calistoga text-sm text-white"
-                  >MatthisBoreaniz</a
-                >
+                <img class="h-[50px] w-[50px]" src="/src/assets/Img/DossierIcons/icons8-github 1.png" alt="GithubIcon" />
+                <a href="https://github.com/MatthisBoreaniz" class="font-calistoga text-sm text-white">MatthisBoreaniz</a>
               </li>
               <li class="flex items-center justify-center space-x-3">
-                <img
-                  class="h-[50px] w-[50px]"
-                  src="/src/assets/Img/DossierIcons/icons8-insta 1.png"
-                  alt="InstagramIcon"
-                />
-                <a
-                  href="https://www.instagram.com/matthisboreaniz/"
-                  class="font-calistoga text-sm text-white"
-                  >MatthisBoreaniz</a
-                >
+                <img class="h-[50px] w-[50px]" src="/src/assets/Img/DossierIcons/icons8-insta 1.png" alt="InstagramIcon" />
+                <a href="https://www.instagram.com/matthisboreaniz/" class="font-calistoga text-sm text-white">MatthisBoreaniz</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="w-2/4 rounded-r-lg p-6 shadow-lg">
-             <h2 class="font-calistoga text-base text-center text-white py-10">Ou mon formulaire ! </h2>
+        <div class="w-full lg:w-2/4 rounded-r-lg p-6 shadow-lg">
+          <h2 class="font-calistoga text-base text-center text-white py-10">Ou mon formulaire ! </h2>
           <form @submit.prevent="submitForm" class="flex flex-col gap-6">
             <input
               type="text"
