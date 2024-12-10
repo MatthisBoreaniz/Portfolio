@@ -73,7 +73,7 @@ const submitForm = async () => {
         </h1>
         <div class="h-1 w-full bg-white"></div>
       </div>
-      <section class="flex flex-col lg:flex-row justify-center gap-10">
+      <section class="flex flex-col lg:flex-row justify-center lg:gap-10">
         <div class="flex flex-col justify-center items-center mb-10 lg:mb-0">
           <h2 class="font-calistoga text-base text-white py-10">via mes réseaux </h2>
           <div>
