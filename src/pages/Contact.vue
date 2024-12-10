@@ -50,7 +50,7 @@ const submitForm = async () => {
 
 <template>
   <div class="min-h-screen bg-black overflow-x-hidden" style="min-height: 100vh; position: relative">
-    <HeaderMenu class="z-10" />
+    <HeaderMenu class="z-50" />
 
     <div class="hidden lg:block">
       <Elipse
