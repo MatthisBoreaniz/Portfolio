@@ -10,7 +10,7 @@ import cardProjet from '@/components/cardProjet.vue'
 
 <template>
   <div class="bg-animate bg-smoke overflow-x-hidden" style="min-height: 100vh; position: relative">
-    <HeaderMenu />
+    <HeaderMenu class="z-10"/>
     <div
       class="my-auto flex flex-col items-center justify-center space-y-1 overflow-x-hidden"
       style="min-height: calc(100vh - 60px); position: relative"
