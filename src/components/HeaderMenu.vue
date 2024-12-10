@@ -10,13 +10,15 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <nav class="flex items-center lg:justify-between justify-between space-x-5 lg:p-5 lg-w-full mx-auto w-full p-3 lg:rounded-none relative">
+  <nav
+    class="lg-w-full relative mx-auto flex w-full items-center justify-between space-x-5 p-3 lg:justify-between lg:rounded-none lg:p-5"
+  >
     <div>
-      <RouterLink to="/"><p class="font-calistoga mx-10 text-base text-white ">MB</p></RouterLink>
+      <RouterLink to="/"><p class="mx-10 font-calistoga text-base text-white">MB</p></RouterLink>
     </div>
 
     <div class="mr-10 lg:hidden">
-      <button @click="toggleMenu" class="relative h-8 w-8 focus:outline-none mr-10">
+      <button @click="toggleMenu" class="relative mr-10 h-8 w-8 focus:outline-none">
         <span
           :class="{ 'rotate-45': isActiveMenu, 'translate-y-2': !isActiveMenu }"
           class="absolute block h-1 w-full transform bg-white transition duration-300 ease-in-out"
@@ -24,39 +26,47 @@ const toggleMenu = () => {
         <span
           :class="{ '-rotate-45': isActiveMenu, '-translate-y-2': !isActiveMenu }"
           class="absolute block h-1 w-full transform bg-white transition duration-300 ease-in-out"
-        ></span> 
+        ></span>
       </button>
     </div>
 
     <div class="hidden lg:block">
       <ul class="font-calistoga text-white lg:flex lg:space-x-20 lg:text-sm">
         <li>
-          <router-link @click.prevent="isActiveMenu = false" to="/">Projets</router-link>
+          <RouterLink @click.prevent="isActiveMenu = false" to="/projets">Projets</RouterLink>
         </li>
         <li>
-          <router-link @click.prevent="isActiveMenu = false" to="/">Contact</router-link>
+          <RouterLink @click.prevent="isActiveMenu = false" to="/Contact">Contact</RouterLink>
         </li>
         <li>
-          <router-link class="mr-10" @click.prevent="isActiveMenu = false" to="/">À propos</router-link>
+          <RouterLink class="mr-10" @click.prevent="isActiveMenu = false" to="/"
+            >À propos</RouterLink
+          >
         </li>
       </ul>
     </div>
-    <div v-scroll-lock="isActiveMenu" :class="{ 'block': isActiveMenu, 'hidden': !isActiveMenu }" class="lg:hidden absolute left-0 right-0 w-full z-10 p-5 bg-black" style="top: 100%; margin-left: 0px; height: calc(100vh - 100%);">
-      <ul class="font-calistoga text-white flex flex-col items-center justify-center space-y-20 my-auto">
-      <li class="mt-20" >
-        <router-link @click.prevent="isActiveMenu = false" to="/">Projets</router-link>
-      </li>
-      <li>
-        <router-link @click.prevent="isActiveMenu = false" to="/">Contact</router-link>
-      </li>
-      <li>
-        <router-link @click.prevent="isActiveMenu = false" to="/">À propos</router-link>
-      </li>
-      <li>
-        <router-link @click.prevent="isActiveMenu = false" to="/guideStyle">Connexion</router-link>
-      </li>
+    <div
+      v-scroll-lock="isActiveMenu"
+      :class="{ block: isActiveMenu, hidden: !isActiveMenu }"
+      class="absolute left-0 right-0 z-10 w-full bg-black p-5 lg:hidden"
+      style="top: 100%; margin-left: 0px; height: calc(100vh - 100%)"
+    >
+      <ul
+        class="my-auto flex flex-col items-center justify-center space-y-20 font-calistoga text-white"
+      >
+        <li class="mt-20">
+          <RouterLink @click.prevent="isActiveMenu = false" to="/projets">Projets</RouterLink>
+        </li>
+        <li>
+          <RouterLink @click.prevent="isActiveMenu = false" to="/Contact">Contact</RouterLink>
+        </li>
+        <li>
+          <RouterLink @click.prevent="isActiveMenu = false" to="/">À propos</RouterLink>
+        </li>
+        <li>
+          <RouterLink @click.prevent="isActiveMenu = false" to="/guideStyle">Connexion</RouterLink>
+        </li>
       </ul>
     </div>
-    </nav>
-  </template>
-
+  </nav>
+</template>
