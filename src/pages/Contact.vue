@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { ref } from 'vue'
 import HeaderMenu from '@/components/HeaderMenu.vue'
@@ -48,10 +49,24 @@ const submitForm = async () => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-black">
-    <HeaderMenu />
+  <div class="min-h-screen bg-black overflow-x-hidden" style="min-height: 100vh; position: relative">
+    <HeaderMenu class="z-10" />
 
-    <div class="flex w-full flex-col p-4">
+    <div class="hidden lg:block">
+      <Elipse
+        class="absolute top-50  z-0"
+        style="
+          width: 1500px;
+          height: 1500px;
+          background-color: white;
+          opacity: 0.05;
+          border-radius: 50%;
+          transform: translate(10%, -50%);
+        "
+      />
+    </div>
+
+    <div class="flex w-full flex-col p-4 z-10">
       <div class="flex items-center mb-4">
         <h1 class="inline-block whitespace-nowrap rounded-r-3xl bg-DeepBlue p-5 font-calistoga lg:text-lg text-base text-white">
           Contactez moi
@@ -65,15 +80,15 @@ const submitForm = async () => {
             <ul class="flex flex-col items-center justify-center space-y-5">
               <li class="flex items-center justify-center space-x-3">
                 <img class="h-[50px] w-[50px]" src="/src/assets/Img/DossierIcons/icons8-linkedin 1.png" alt="LinkedinIcon" />
-                <a href="https://www.linkedin.com/in/matthis-boreaniz-70879a281/" class="font-calistoga text-sm text-white">MatthisBoreaniz</a>
+                <a href="https://www.linkedin.com/in/matthis-boreaniz-70879a281/" class="font-calistoga text-sm text-white z-10">MatthisBoreaniz</a>
               </li>
               <li class="flex items-center justify-center space-x-3">
                 <img class="h-[50px] w-[50px]" src="/src/assets/Img/DossierIcons/icons8-github 1.png" alt="GithubIcon" />
-                <a href="https://github.com/MatthisBoreaniz" class="font-calistoga text-sm text-white">MatthisBoreaniz</a>
+                <a href="https://github.com/MatthisBoreaniz" class="font-calistoga text-sm text-white z-10">MatthisBoreaniz</a>
               </li>
               <li class="flex items-center justify-center space-x-3">
                 <img class="h-[50px] w-[50px]" src="/src/assets/Img/DossierIcons/icons8-insta 1.png" alt="InstagramIcon" />
-                <a href="https://www.instagram.com/matthisboreaniz/" class="font-calistoga text-sm text-white">MatthisBoreaniz</a>
+                <a href="https://www.instagram.com/matthisboreaniz/" class="font-calistoga text-sm text-white z-10">MatthisBoreaniz</a>
               </li>
             </ul>
           </div>
@@ -86,31 +101,31 @@ const submitForm = async () => {
               name="firstName"
               v-model="form.firstName"
               placeholder="Votre Prénom"
-              class="border-2px w-full rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500"
+              class="border-2px w-full rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500 z-10"
             />
             <input
               type="text"
               name="lastName"
               v-model="form.lastName"
               placeholder="Votre Nom"
-              class="border-2px w-full rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500"
+              class="border-2px w-full rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500 z-10"
             />
             <input
               type="email"
               name="email"
               v-model="form.email"
               placeholder="Votre Email"
-              class="border-2px w-full rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500"
+              class="border-2px w-full rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500 z-10"
             />
             <textarea
               name="message"
               v-model="form.message"
               placeholder="Votre Message"
-              class="border-2px h-32 w-full resize-none rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500"
+              class="border-2px h-32 w-full resize-none rounded-2xl border border-DeepBlue bg-white p-2 text-black placeholder-gray-500 z-10"
             ></textarea>
             <button
               type="submit"
-              class="self-end rounded-lg bg-DeepBlue px-2 py-1 font-calistoga text-sm text-white transition hover:bg-purple-700"
+              class="self-end rounded-lg bg-DeepBlue px-2 py-1 font-calistoga text-sm text-white transition hover:bg-purple-700 z-10"
             >
               Envoyer
             </button>
