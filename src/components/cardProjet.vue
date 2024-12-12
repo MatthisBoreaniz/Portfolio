@@ -6,23 +6,17 @@ const props = defineProps<ProjetsResponse<any>>()
 </script>
 
 <template>
-  <div class="w-[355px] h-[355px] relative group hover:bg-white ">
-    <div
-      class="w-[355px] h-[355px] absolute left-[-3px] top-[-3px] rounded-[25px] bg-black border-[5px] border-white group-hover:bg-white group-hover:border-black"
-    ></div>
-    
-    <div class="w-[200px] h-[81.6px] absolute left-[77px] top-[137px] group-hover:bg-white group-hover:border-black">
-      <div class="flex flex-col justify-center items-center w-full h-full ">
-        <ImgPb 
-          :record="props"
-          :filename="image"
-          class="w-[200px] object-cover"
-        />
-
-        <p class="mt-10">{{ titre }}</p>
-        
-      </div>
-    
+<div class="w-[400px] h-[280px] relative border-2 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+    <ImgPb
+        :record="props"
+        :filename="props.image"
+        class="w-full h-[202px] object-cover transition-transform duration-300 hover:scale-110"
+    />
+    <div class="w-full h-[78px] absolute bottom-0 flex items-center justify-center bg-gradient-to-t from-black to-transparent p-2 transition-opacity duration-300 hover:opacity-100">
+        <p class="text-sm text-center text-white font-calistoga ">
+            {{ props.titre }}
+        </p>
     </div>
-  </div>
+</div>
+
 </template>

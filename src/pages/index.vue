@@ -1,31 +1,31 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { ref } from 'vue';
-import HeaderMenu from '@/components/HeaderMenu.vue';
-import Elipse from '@/components/Elipse.vue';
-import { pb } from '@/backend';
-const projetslist = await pb.collection('projets').getFullList();
-import CardProjetCarousel from '@/components/cardProjetCarousel.vue';
-import cardProjet from '@/components/cardProjet.vue';
+import { ref } from 'vue'
+import HeaderMenu from '@/components/HeaderMenu.vue'
+import Elipse from '@/components/Elipse.vue'
+import { pb } from '@/backend'
+const projetslist = await pb.collection('projets').getFullList()
+import CardProjetCarousel from '@/components/cardProjetCarousel.vue'
+import cardProjet from '@/components/cardProjet.vue'
 
-const carousel = ref<HTMLElement | null>(null);
+const carousel = ref<HTMLElement | null>(null)
 
 function scrollLeft() {
   if (carousel.value) {
-    carousel.value.scrollBy({ left: -window.innerWidth * 0.8, behavior: 'smooth' });
+    carousel.value.scrollBy({ left: -window.innerWidth * 0.8, behavior: 'smooth' })
   }
 }
 
 function scrollRight() {
   if (carousel.value) {
-    carousel.value.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+    carousel.value.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' })
   }
 }
 </script>
 
 <template>
   <div class="bg-animate bg-smoke overflow-x-hidden" style="min-height: 100vh; position: relative">
-    <HeaderMenu class="z-10"/>
+    <HeaderMenu class="z-10" />
     <div
       class="my-auto flex flex-col items-center justify-center space-y-1 overflow-x-hidden"
       style="min-height: calc(100vh - 60px); position: relative"
@@ -47,7 +47,7 @@ function scrollRight() {
       />
     </div>
 
-    <section class="bg-black py-20 relative z-10">
+    <section class="relative z-10 bg-black py-20">
       <div
         class="mx-auto flex w-11/12 flex-col rounded-3xl bg-white bg-opacity-10 lg:w-2/4 lg:flex-row"
       >
@@ -87,34 +87,34 @@ function scrollRight() {
       </div>
 
       <div class="my-24">
-        <div class="flex justify-center space-x-16 pb-8 z-20">
-          <div class="group relative transition-transform duration-300 hover:scale-110 z-20">
+        <div class="z-20 flex justify-center space-x-16 pb-8">
+          <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img class="h-[100px] lg:h-[150px]" src="../assets/Img/css-3 1.png" alt="CSS" />
             <div
-              class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block z-20"
+              class="absolute bottom-full left-1/2 z-20 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
               <p class="font-calistoga">CSS</p>
             </div>
           </div>
-          <div class="group relative transition-transform duration-300 hover:scale-110 z-20">
+          <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img class="h-[100px] lg:h-[150px]" src="../assets/Img/html-1 2.png" alt="HTML" />
             <div
-              class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block z-20"
+              class="absolute bottom-full left-1/2 z-20 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
               <p class="font-calistoga">HTML</p>
             </div>
           </div>
-          <div class="group relative transition-transform duration-300 hover:scale-110 z-20">
+          <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img class="h-[100px] lg:h-[150px]" src="../assets/Img/javascript-1 1.png" alt="JS" />
             <div
-              class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block z-20"
+              class="absolute bottom-full left-1/2 z-20 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
               <p class="font-calistoga">JavaScript</p>
             </div>
           </div>
         </div>
-        <div class="flex justify-center space-x-16 z-20">
-          <div class="group relative transition-transform duration-300 hover:scale-110 z-20">
+        <div class="z-20 flex justify-center space-x-16">
+          <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img
               class="h-[100px] lg:h-[150px]"
               src="../assets/Img/icons8-wordpress 1.png"
@@ -126,31 +126,31 @@ function scrollRight() {
               <p class="font-calistoga">Wordpress</p>
             </div>
           </div>
-          <div class="group relative transition-transform duration-300 hover:scale-110 z-20">
+          <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img class="h-[100px] lg:h-[150px]" src="../assets/Img/vue-js 1.png" alt="VUEJS" />
             <div
-              class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block z-20"
+              class="absolute bottom-full left-1/2 z-20 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
               <p class="font-calistoga">VueJS</p>
             </div>
           </div>
         </div>
-        <div class="flex justify-center z-20">
-          <div class="group relative transition-transform duration-300 hover:scale-110 z-20">
+        <div class="z-20 flex justify-center">
+          <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img class="h-[100px] lg:h-[150px]" src="../assets/Img/SQL.png" alt="SQL" />
             <div
-              class="absolute bottom-full left-1/2 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block z-20"
+              class="absolute bottom-full left-1/2 z-20 mb-2 hidden -translate-x-1/2 transform text-center text-white group-hover:block"
             >
               <p class="font-calistoga">SQL</p>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="text-center font-calistoga lg:text-xl text-base text-White">Mes Projets</h2>
+      <h2 class="text-center font-calistoga text-base text-White lg:text-xl">Mes Projets</h2>
       <div class="relative hidden lg:block">
-         <div class="no-scrollbar flex h-screen items-center justify-center px-5 z-10">
+        <div class="no-scrollbar z-10 flex h-screen items-center justify-center px-5">
           <button
-            class="absolute left-5 z-20 bg-white bg-opacity-25 hover:bg-opacity-100 w-10 h-10 p-3 rounded-full shadow-lg hover:bg-gray-300 flex items-center justify-center font-calistoga text-DeepRed"
+            class="absolute left-5 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-25 p-3 font-calistoga text-DeepRed shadow-lg hover:bg-gray-300 hover:bg-opacity-100"
             @click="scrollLeft"
           >
             &#9664;
@@ -166,13 +166,13 @@ function scrollRight() {
               :key="unProjet.id"
             >
               <RouterLink :to="{ name: '/projets/[id]', params: { id: unProjet.id } }">
-                <CardProjetCarousel v-bind="unProjet" class="h-full w-full object-cover z-10" />
+                <CardProjetCarousel v-bind="unProjet" class="z-10 h-full w-full object-cover" />
               </RouterLink>
             </div>
           </div>
 
-           <button
-            class="absolute right-5 z-20 bg-white bg-opacity-25 w-10 h-10 p-3 rounded-full shadow-lg hover:bg-gray-300 flex items-center justify-center font-calistoga text-DeepRed hover:bg-opacity-100"
+          <button
+            class="absolute right-5 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-25 p-3 font-calistoga text-DeepRed shadow-lg hover:bg-gray-300 hover:bg-opacity-100"
             @click="scrollRight"
           >
             &#9654;
@@ -195,12 +195,16 @@ function scrollRight() {
         </div>
       </div>
 
-           <div class="flex flex-wrap justify-center lg:hidden" v-for="projet in projetslist" :key="projet.id">
-        <RouterLink :to="{ name: '/projets/[id]', params: { id: projet.id } }">
-          <cardProjet v-bind="projet" />
-        </RouterLink>
-      </div>
-
+      
+        <div
+          class="flex flex-wrap justify-center lg:hidden"
+          v-for="projet in projetslist"
+          :key="projet.id"
+        >
+          <RouterLink :to="{ name: '/projets/[id]', params: { id: projet.id } }">
+            <cardProjet class="my-10" v-bind="projet" />
+          </RouterLink>
+        </div>
     </section>
   </div>
 </template>
