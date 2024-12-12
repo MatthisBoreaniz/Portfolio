@@ -73,9 +73,9 @@ const submitForm = async () => {
         </h1>
         <div class="h-1 w-full bg-white"></div>
       </div>
-      <section class="flex flex-col lg:flex-row justify-center lg:gap-10">
+      <section class="flex flex-col lg:flex-row justify-center lg:gap-24">
         <div class="flex flex-col justify-center items-center mb-10 lg:mb-0">
-          <h2 class="font-calistoga text-base text-white py-10">via mes réseaux </h2>
+          <h2 class="font-calistoga text-base text-white py-10">Via mes réseaux </h2>
           <div>
             <ul class="flex flex-col items-center justify-center space-y-5">
               <li class="flex items-center justify-center space-x-3">
@@ -93,7 +93,7 @@ const submitForm = async () => {
             </ul>
           </div>
         </div>
-        <div class="w-full lg:w-2/4 rounded-r-lg p-6 shadow-lg">
+        <div class="w-full lg:w-[700px] rounded-r-lg p-6 shadow-lg">
           <h2 class="font-calistoga text-base text-center text-white py-10">Ou mon formulaire ! </h2>
           <form @submit.prevent="submitForm" class="flex flex-col gap-6">
             <input
