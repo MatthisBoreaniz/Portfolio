@@ -1,11 +1,22 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { pb } from '@/backend';
+import { useRoute, useRouter } from 'vue-router';
 import cardProjet from '@/components/cardProjet.vue';
 import HeaderMenu from '@/components/HeaderMenu.vue';
 import { RouterLink } from 'vue-router';
 
+const route = useRoute('/projets/[id]')
+const router = useRouter()
+
 const listProjets = await pb.collection('projets').getFullList();
+function edit () {
+    router.push({
+        name: '/projets/edit/[[id]]',
+        params: { id: route.params.id }
+    })
+}
+
 </script>
 
 <template>
@@ -24,6 +35,10 @@ const listProjets = await pb.collection('projets').getFullList();
             </div>
         </div>
    
+</div>
+
+<div class="flex justify-center">
+    <button @click="edit" class="bg-white text-black font-calistoga text-base p-2 rounded-lg mt-4">Créer un projet</button>
 </div>
 
 </template>

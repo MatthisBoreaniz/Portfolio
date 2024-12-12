@@ -117,7 +117,7 @@ async function deleteProjetById() {
       Modifier
     </button>
     <button
-      @click="deleteProjetById" v-if="user"
+      @click="deleteProjetById"
       class="font-calistoga text-white text-center text-xs md:text-sm bg-red-600 hover:bg-red-800 py-4 px-4 rounded-full transition-colors duration-300 shadow-lg"
     >
       Supprimer
