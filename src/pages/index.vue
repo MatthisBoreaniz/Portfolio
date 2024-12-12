@@ -21,6 +21,7 @@ function scrollRight() {
     carousel.value.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' })
   }
 }
+
 </script>
 
 <template>
@@ -50,6 +51,7 @@ function scrollRight() {
     <section class="relative z-10 bg-black py-20">
       <div
         class="mx-auto flex w-11/12 flex-col rounded-3xl bg-white bg-opacity-10 lg:w-2/4 lg:flex-row"
+        id="apropos"
       >
         <div
           class="mb-4 flex flex-col items-center justify-between rounded-t-3xl bg-white p-5 lg:mb-0 lg:mr-4 lg:rounded-l-3xl lg:rounded-tr-none"
@@ -86,7 +88,7 @@ function scrollRight() {
         </div>
       </div>
 
-      <div class="my-24">
+      <div class="my-24" >
         <div class="z-20 flex justify-center space-x-16 pb-8">
           <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img class="h-[100px] lg:h-[150px]" src="../assets/Img/css-3 1.png" alt="CSS" />

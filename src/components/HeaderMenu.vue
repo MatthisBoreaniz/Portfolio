@@ -7,6 +7,15 @@ const isActiveMenu = ref(false)
 const toggleMenu = () => {
   isActiveMenu.value = !isActiveMenu.value
 }
+
+const scrollToSection = () => {
+  const section = document.querySelector('#apropos');
+  if (section) {
+    const yOffset = -80; // Ajustement pour compenser la barre de défilement
+    const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+}
 </script>
 
 <template>
@@ -39,7 +48,7 @@ const toggleMenu = () => {
           <RouterLink @click.prevent="isActiveMenu = false" to="/Contact">Contact</RouterLink>
         </li>
         <li>
-          <RouterLink class="mr-10" @click.prevent="isActiveMenu = false" to="/"
+          <RouterLink class="mr-10" @click.prevent="isActiveMenu = false; scrollToSection " :to="{ path: '/', hash: '#apropos' }"
             >À propos</RouterLink
           >
         </li>
@@ -61,7 +70,7 @@ const toggleMenu = () => {
           <RouterLink @click.prevent="isActiveMenu = false" to="/Contact">Contact</RouterLink>
         </li>
         <li>
-          <RouterLink @click.prevent="isActiveMenu = false" to="/">À propos</RouterLink>
+          <RouterLink @click.prevent="isActiveMenu = false; scrollToSection" :to="{ path: '/', hash: '#apropos' }">À propos</RouterLink>
         </li>
         <li>
           <RouterLink @click.prevent="isActiveMenu = false" to="/guideStyle">Connexion</RouterLink>
