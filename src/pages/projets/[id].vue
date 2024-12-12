@@ -1,19 +1,20 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { pb } from '@/backend'
+import { pb, user } from '@/backend'
 import HeaderMenu from '@/components/HeaderMenu.vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import ImgPb from '../ImgPb.vue'
 import sanitizeHtml from 'sanitize-html'
 import { ref } from 'vue'
 
 const route = useRoute('/projets/[id]')
+const router = useRouter()
 
-const Projets = await pb.collection('projets').getOne(route.params.id)
+const Projets = ref( await pb.collection('projets').getOne(route.params.id))
 const photos = [
-  { id: Projets.id, filename: Projets.photo1, record: Projets },
-  { id: Projets.id, filename: Projets.photo2, record: Projets },
-  { id: Projets.id, filename: Projets.photo3, record: Projets }
+  { id: Projets.value.id, filename: Projets.value.photo1, record: Projets.value },
+  { id: Projets.value.id, filename: Projets.value.photo2, record: Projets.value },
+  { id: Projets.value.id, filename: Projets.value.photo3, record: Projets.value }
 ].filter(photo => photo.filename)
 
 const currentIndex = ref(1)
@@ -28,6 +29,21 @@ const prevSlide = () => {
 
 const goToSlide = (index: number) => {
   currentIndex.value = index
+}
+
+function edit() {
+  router.push({
+    name: '/projets/edit/[[id]]',
+    params: { id: Projets.value.id }
+  })
+}
+
+async function deleteProjetById() {
+  const confirmation = confirm('voulez vous vraiment supprimer ce projet ?')
+  if (confirmation) {
+    await pb.collection('projets').delete(route.params.id)
+    router.push({ name: '/projets/' })
+  }
 }
 </script>
 
@@ -93,7 +109,20 @@ const goToSlide = (index: number) => {
       </div>
     </div>
   </div>
-
+  <div>
+    <button
+      @click="edit"
+      class="font-calistoga text-white text-center text-xs md:text-sm bg-purple-600 hover:bg-purple-800 py-4 px-4 rounded-full transition-colors duration-300 shadow-lg"
+    >
+      Modifier
+    </button>
+    <button
+      @click="deleteProjetById" v-if="user"
+      class="font-calistoga text-white text-center text-xs md:text-sm bg-red-600 hover:bg-red-800 py-4 px-4 rounded-full transition-colors duration-300 shadow-lg"
+    >
+      Supprimer
+    </button>
+  </div>
   <div class="py-10 flex justify-center">
     <a 
       :href="Projets.lien" 
@@ -102,6 +131,7 @@ const goToSlide = (index: number) => {
     >
       Voir le site
     </a>
+
   </div>
 </div>
 </template>
