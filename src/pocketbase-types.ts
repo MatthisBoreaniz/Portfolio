@@ -39,6 +39,7 @@ export type ProjetsRecord = {
 	description2?: HTMLString
 	description3?: HTMLString
 	image?: string
+	lien?: string
 	logo?: string
 	photo1?: string
 	photo2?: string
