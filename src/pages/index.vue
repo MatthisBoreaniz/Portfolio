@@ -1,11 +1,26 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import HeaderMenu from '@/components/HeaderMenu.vue'
-import Elipse from '@/components/Elipse.vue'
-import { pb } from '@/backend'
-const projetslist = await pb.collection('projets').getFullList()
-import CardProjetCarousel from '@/components/cardProjetCarousel.vue'
-import cardProjet from '@/components/cardProjet.vue'
+import { ref } from 'vue';
+import HeaderMenu from '@/components/HeaderMenu.vue';
+import Elipse from '@/components/Elipse.vue';
+import { pb } from '@/backend';
+const projetslist = await pb.collection('projets').getFullList();
+import CardProjetCarousel from '@/components/cardProjetCarousel.vue';
+import cardProjet from '@/components/cardProjet.vue';
+
+const carousel = ref<HTMLElement | null>(null);
+
+function scrollLeft() {
+  if (carousel.value) {
+    carousel.value.scrollBy({ left: -window.innerWidth * 0.8, behavior: 'smooth' });
+  }
+}
+
+function scrollRight() {
+  if (carousel.value) {
+    carousel.value.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+  }
+}
 </script>
 
 <template>
@@ -133,20 +148,36 @@ import cardProjet from '@/components/cardProjet.vue'
       </div>
       <h2 class="text-center font-calistoga lg:text-xl text-base text-White">Mes Projets</h2>
       <div class="relative hidden lg:block">
-        <div class="no-scrollbar flex h-screen items-center justify-center px-5 z-10">
-          <div class="no-scrollbar flex snap-x snap-mandatory space-x-32 overflow-x-auto px-4">
+         <div class="no-scrollbar flex h-screen items-center justify-center px-5 z-10">
+          <button
+            class="absolute left-5 z-20 bg-white bg-opacity-25 hover:bg-opacity-100 w-10 h-10 p-3 rounded-full shadow-lg hover:bg-gray-300 flex items-center justify-center font-calistoga text-DeepRed"
+            @click="scrollLeft"
+          >
+            &#9664;
+          </button>
+
+          <div
+            class="no-scrollbar flex snap-x snap-mandatory space-x-32 overflow-x-auto px-4"
+            ref="carousel"
+          >
             <div
               class="no-scrollbar h-[80vh] min-w-[80vw] flex-shrink-0 snap-center"
               v-for="unProjet in projetslist"
               :key="unProjet.id"
             >
-            <RouterLink :to="{ name: '/projets/[id]', params: { id: unProjet.id } }">
-              <CardProjetCarousel v-bind="unProjet" class="h-full w-full object-cover  z-10  " />
-            </RouterLink>
+              <RouterLink :to="{ name: '/projets/[id]', params: { id: unProjet.id } }">
+                <CardProjetCarousel v-bind="unProjet" class="h-full w-full object-cover z-10" />
+              </RouterLink>
             </div>
           </div>
-        </div>
 
+           <button
+            class="absolute right-5 z-20 bg-white bg-opacity-25 w-10 h-10 p-3 rounded-full shadow-lg hover:bg-gray-300 flex items-center justify-center font-calistoga text-DeepRed hover:bg-opacity-100"
+            @click="scrollRight"
+          >
+            &#9654;
+          </button>
+        </div>
         <div class="hidden lg:block">
           <Elipse
             class="absolute right-0 top-0 z-0"
@@ -164,13 +195,10 @@ import cardProjet from '@/components/cardProjet.vue'
         </div>
       </div>
 
-      <div class="flex flex-wrap justify-center lg:hidden" v-for="projet in projetslist" :key="projet.id" >
+           <div class="flex flex-wrap justify-center lg:hidden" v-for="projet in projetslist" :key="projet.id">
         <RouterLink :to="{ name: '/projets/[id]', params: { id: projet.id } }">
-          
-        <cardProjet v-bind="projet" />
+          <cardProjet v-bind="projet" />
         </RouterLink>
-
-        <div></div>
       </div>
 
     </section>
