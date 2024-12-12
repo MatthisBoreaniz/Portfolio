@@ -35,8 +35,8 @@ const goToSlide = (index: number) => {
   <div class="bg-animate">
     <HeaderMenu />
     <div class="p-5 md:p-10 flex flex-col items-center">
-      <div class="flex justify-center items-center gap-10">
-        <h1 class="text-center font-calistoga text-2xl md:text-4xl text-white mb-4">
+      <div class="flex  justify-center items-center gap-10">
+        <h1 class="text-center font-calistoga md:text-4xl text-white mb-4">
           {{ Projets.titre }}
         </h1>
         <ImgPb :record="Projets" :filename="Projets.logo" class=" object-cover  mb-4" />
@@ -80,18 +80,28 @@ const goToSlide = (index: number) => {
       <div class="flex justify-between items-center mt-5">
         <button
           @click="prevSlide"
-          class="bg-gray-100 hover:bg-gray-300 text-black rounded-full p-2 md:p-3 shadow-md"
+          class="bg-gray-100 hover:bg-gray-300 hover:text-white text-black rounded-full p-2 md:p-3 shadow-md h-10 w-10 flex justify-center items-center"
         >
           ‹
         </button>
         <button
           @click="nextSlide"
-          class="bg-gray-100 hover:bg-gray-300 text-black rounded-full p-2 md:p-3 shadow-md"
+          class="bg-gray-100 hover:bg-gray-300 hover:text-white text-black rounded-full p-2 md:p-3 shadow-md h-10 w-10 flex justify-center items-center"
           >
           ›
         </button>
       </div>
     </div>
+  </div>
+
+  <div class="py-10 flex justify-center">
+    <a 
+      :href="Projets.lien" 
+      target="_blank" 
+      class="font-calistoga text-white text-center text-xs md:text-sm bg-purple-600 hover:bg-purple-800 py-4 px-4 rounded-full transition-colors duration-300 shadow-lg"
+    >
+      Voir le site
+    </a>
   </div>
 </div>
 </template>
