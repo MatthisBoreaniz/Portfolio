@@ -130,7 +130,7 @@ const submit = async (event: Event) => {
         />
         <input type="file" ref="uploadLogo">
       </div>
-      <div>
+      <div v-if="user">
         <button v-if="projet.id" type="submit">Enregistrer</button>
         <button v-if="!projet.id" type="submit">Créer</button>
         <button @click="router.back()">Annuler</button>

@@ -79,7 +79,7 @@ const scrollToSection = () => {
           <RouterLink @click.prevent="isActiveMenu = false; scrollToSection" :to="{ path: '/', hash: '#apropos' }">À propos</RouterLink>
         </li>
         <li>
-          <RouterLink @click.prevent="isActiveMenu = false" to="/guideStyle">Connexion</RouterLink>
+          <RouterLink @click.prevent="isActiveMenu = false" to="/connexion">Connexion</RouterLink>
         </li>
       </ul>
     </div>

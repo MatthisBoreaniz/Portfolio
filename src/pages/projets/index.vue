@@ -5,6 +5,7 @@ import { useRoute, useRouter } from 'vue-router';
 import cardProjet from '@/components/cardProjet.vue';
 import HeaderMenu from '@/components/HeaderMenu.vue';
 import { RouterLink } from 'vue-router';
+import { user, } from '@/backend';
 
 const route = useRoute('/projets/[id]')
 const router = useRouter()
@@ -37,7 +38,7 @@ function edit () {
    
 </div>
 
-<div class="flex justify-center">
+<div class="flex justify-center" v-if="user">
     <button @click="edit" class="bg-white text-black font-calistoga text-base p-2 rounded-lg mt-4">Créer un projet</button>
 </div>
 

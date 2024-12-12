@@ -109,7 +109,7 @@ async function deleteProjetById() {
       </div>
     </div>
   </div>
-  <div>
+  <div v-if="user">
     <button
       @click="edit"
       class="font-calistoga text-white text-center text-xs md:text-sm bg-purple-600 hover:bg-purple-800 py-4 px-4 rounded-full transition-colors duration-300 shadow-lg"
