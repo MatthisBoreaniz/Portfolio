@@ -143,9 +143,9 @@ const submit = async (event: Event) => {
                 </div>
 
                 <div class="flex flex-col sm:flex-row justify-between space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button v-if="projet.id" type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Enregistrer</button>
-                    <button v-if="!projet.id" type="submit" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Créer</button>
-                    <button @click="router.back()" type="button" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">Annuler</button>
+                    <button v-if="projet.id" type="submit" @touchstart="submit" class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Enregistrer</button>
+                    <button v-if="!projet.id" type="submit" @touchstart="submit" class="w-full sm:w-auto px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">Créer</button>
+                    <button @click="router.back()" @touchstart="router.back()" type="button" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">Annuler</button>
                 </div>
             </form>
         </div>
