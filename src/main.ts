@@ -10,30 +10,35 @@ const app = createApp(App)
 
 app.use(
   createRouter({
-      history: createWebHistory(),
+    history: createWebHistory(),
 
-  routes,
+    routes,
 
-  scrollBehavior(to, from, savedPosition) {
-    if (to.hash) {
-      return {
-        el: to.hash,
+    scrollBehavior(to, from, savedPosition) {
+      if (to.hash) {
+        console.log('to.hash', to.hash)
+        setTimeout(() => {
+          window.scrollTo({
+            top: (document.querySelector(to.hash) as HTMLElement)?.getBoundingClientRect().top/*  + window.scrollY */,
+            behavior: 'smooth'
+          })
+        }, 3000)
+        return {
+          el: to.hash,
 
-        behavior: 'smooth',
+          behavior: 'smooth',
 
-        top: -80 // Ajustement pour compenser la barre de défilement
+          top: 0 // Ajustement pour compenser la barre de défilement
+        }
+      } else if (savedPosition) {
+        return savedPosition
+      } else {
+        return { top: 0 }
       }
-    } else if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 0 }
     }
-  }
-})
+  })
 )
 
 app.use(V3ScrollLock, {})
 
 app.mount('#app')
-
-

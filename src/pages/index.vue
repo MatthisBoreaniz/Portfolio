@@ -48,43 +48,44 @@ function scrollRight() {
       />
     </div>
 
-    <section class="relative z-10 bg-black py-20">
-      <div
-        class="mx-auto flex w-11/12 flex-col rounded-3xl bg-white bg-opacity-10 lg:w-2/4 lg:flex-row"
-        id="apropos"
-      >
+    <section class="relative z-10 bg-black py-20" >
+      <div id="apropos">
         <div
-          class="mb-4 flex flex-col items-center justify-between rounded-t-3xl bg-white p-5 lg:mb-0 lg:mr-4 lg:rounded-l-3xl lg:rounded-tr-none"
-          style="flex: 1 1 45%"
+          class="mx-auto flex w-11/12 flex-col rounded-3xl bg-white bg-opacity-10 lg:w-2/4 lg:flex-row"
+        
         >
-          <img
-            src="../assets/Img/Matthis.jpg"
-            alt="Photo Matthis"
-            class="h-56 w-56 rounded-full border-4 border-DeepBlue object-cover"
-          />
-          <div class="flex h-full flex-col justify-end">
-            <h1 class="tx-lg text-center font-calistoga text-Black">
-              Matthis Boreaniz <br />
-              C'est moi !
-            </h1>
+          <div
+            class="mb-4 flex flex-col items-center justify-between rounded-t-3xl bg-white p-5 lg:mb-0 lg:mr-4 lg:rounded-l-3xl lg:rounded-tr-none"
+            style="flex: 1 1 45%"
+          >
+            <img
+              src="../assets/Img/Matthis.jpg"
+              alt="Photo Matthis"
+              class="h-56 w-56 rounded-full border-4 border-DeepBlue object-cover"
+            />
+            <div class="flex h-full flex-col justify-end">
+              <h1 class="tx-lg text-center font-calistoga text-Black">
+                Matthis Boreaniz <br />
+                C'est moi !
+              </h1>
+            </div>
           </div>
-        </div>
-
-        <div class="flex-1 p-4 font-calistoga text-white" style="flex: 1 1 55%">
-          <p class="mb-10">
-            J'ai 20 ans et je suis actuellement en 2ᵉ année de BUT Métiers du Multimédia et de
-            l'Internet à l'IUT de Montbéliard, dans le domaine du développement web.
-          </p>
-          <p class="mb-10">
-            J’ai pour objectif de devenir développeur web et plus spécifiquement développeur
-            front-end. Je maîtrise notamment différents langages de programmation tels que HTML, CSS
-            et JavaScript. J'ai également beaucoup travaillé durant mon année sur le framework
-            Vue.js.
-          </p>
-          <p>
-            Je vous présente donc, à travers ce portfolio, les différents projets auxquels j’ai pu
-            prendre part durant ces deux années déjà effectuées au sein de la formation MMI.
-          </p>
+          <div class="flex-1 p-4 font-calistoga text-white" style="flex: 1 1 55%">
+            <p class="mb-10">
+              J'ai 20 ans et je suis actuellement en 2ᵉ année de BUT Métiers du Multimédia et de
+              l'Internet à l'IUT de Montbéliard, dans le domaine du développement web.
+            </p>
+            <p class="mb-10">
+              J’ai pour objectif de devenir développeur web et plus spécifiquement développeur
+              front-end. Je maîtrise notamment différents langages de programmation tels que HTML, CSS
+              et JavaScript. J'ai également beaucoup travaillé durant mon année sur le framework
+              Vue.js.
+            </p>
+            <p>
+              Je vous présente donc, à travers ce portfolio, les différents projets auxquels j’ai pu
+              prendre part durant ces deux années déjà effectuées au sein de la formation MMI.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -152,7 +153,7 @@ function scrollRight() {
       <div class="relative hidden lg:block">
         <div class="no-scrollbar z-10 flex h-screen items-center justify-center px-5">
           <button
-            class="absolute left-5 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-25 p-3 font-calistoga text-DeepRed shadow-lg hover:bg-gray-300 hover:bg-opacity-100"
+            class="absolute left-5 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-25 p-3 font-calistoga text-white hover:text-black shadow-lg hover:bg-gray-300 hover:bg-opacity-100"
             @click="scrollLeft"
           >
             &#9664;
@@ -174,7 +175,7 @@ function scrollRight() {
           </div>
 
           <button
-            class="absolute right-5 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-25 p-3 font-calistoga text-DeepRed shadow-lg hover:bg-gray-300 hover:bg-opacity-100"
+            class="absolute right-5 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-25 p-3 font-calistoga text-white shadow-lg hover:bg-gray-300 hover:text-black hover:bg-opacity-100"
             @click="scrollRight"
           >
             &#9654;

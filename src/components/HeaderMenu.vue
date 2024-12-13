@@ -8,22 +8,6 @@ const toggleMenu = () => {
   isActiveMenu.value = !isActiveMenu.value
 }
 
-const scrollToSection = () => {
-  const section = document.querySelector('#apropos');
-  if (!section) {
-    window.location.href = '/#apropos';
-    window.addEventListener('load', () => {
-      const section = document.querySelector('#apropos');
-      if (section) {
-        const yOffset = -80; 
-        const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
-    });
-    return;
-  }
-
-}
 </script>
 
 <template>
@@ -56,7 +40,7 @@ const scrollToSection = () => {
           <RouterLink @click.prevent="isActiveMenu = false" to="/Contact">Contact</RouterLink>
         </li>
         <li>
-          <RouterLink @click.prevent="isActiveMenu = false; scrollToSection" :to="{ path: '/', hash: '#apropos' }">À propos</RouterLink>
+          <RouterLink @click.prevent="isActiveMenu = false" :to="{path: '/', hash: '#apropos'}">À propos</RouterLink>
         </li>
       </ul>
     </div>
@@ -76,7 +60,7 @@ const scrollToSection = () => {
           <RouterLink @click.prevent="isActiveMenu = false" to="/Contact">Contact</RouterLink>
         </li>
         <li>
-          <RouterLink @click.prevent="isActiveMenu = false; scrollToSection" :to="{ path: '/', hash: '#apropos' }">À propos</RouterLink>
+          <RouterLink @click.prevent="isActiveMenu = false" :to="{path: '/', hash: '#apropos'}">À propos</RouterLink>
         </li>
         <li>
           <RouterLink @click.prevent="isActiveMenu = false" to="/connexion">Connexion</RouterLink>

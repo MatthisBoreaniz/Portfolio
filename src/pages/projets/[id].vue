@@ -55,7 +55,7 @@ async function deleteProjetById() {
         <h1 class="text-center font-calistoga md:text-4xl text-white mb-4">
           {{ Projets.titre }}
         </h1>
-        <ImgPb :record="Projets" :filename="Projets.logo" class=" object-cover  mb-4" />
+        <ImgPb :record="Projets" :filename="Projets.logo" class="max-w-16 max-h-16 md:max-w-24 md:max-h-24 object-cover mb-4" />
       </div>
       <div class="w-full h-60 md:h-96">
       <ImgPb
@@ -85,9 +85,9 @@ async function deleteProjetById() {
           @click="goToSlide(index)"
         >
           <ImgPb
-            :record="photo.record"
-            :filename="photo.filename"
-            class="h-full w-[250px] md:w-[500px] object-contain rounded-lg"
+        :record="photo.record"
+        :filename="photo.filename"
+        class="h-full w-[300px] md:w-[600px] object-contain rounded-lg"
           />
         </div>
       </div>
