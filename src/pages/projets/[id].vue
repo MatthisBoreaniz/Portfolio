@@ -87,7 +87,7 @@ async function deleteProjetById() {
           <ImgPb
         :record="photo.record"
         :filename="photo.filename"
-        class="h-full w-[300px] md:w-[600px] object-contain rounded-lg"
+        class="max-h-[200px] h-full w-[300px] md:w-[600px] object-contain rounded-lg"
           />
         </div>
       </div>
