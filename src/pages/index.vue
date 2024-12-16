@@ -34,7 +34,7 @@ const scrollToNextSection = () => {
 
 <template>
   <div class="bg-animate bg-smoke overflow-x-hidden" style="min-height: 100vh; position: relative">
-    <HeaderMenu class="z-10" />
+    <HeaderMenu class="z-20" />
     <div
       class="my-auto flex flex-col items-center justify-center space-y-1 overflow-x-hidden"
       style="min-height: calc(100vh - 60px); position: relative"
@@ -43,7 +43,7 @@ const scrollToNextSection = () => {
       <h2 class="font-calistoga text-sm text-White lg:text-lg">Développeur web</h2>
       <button
         @click="scrollToNextSection"
-        class="font-calistoga text-sm text-White bg-Black border-2 p-2 rounded-lg mt-4 z-20 absolute bottom-32 lg:right-4 lg:bottom-16 flex items-center justify-center"
+        class="font-calistoga text-sm text-White bg-Black border-2 p-2 rounded-lg mt-4 z-10 absolute bottom-32 lg:right-4 lg:bottom-16 flex items-center justify-center"
         style="width: 50px; height: 50px; border-radius: 50%;">
         &#9660;
       </button>
