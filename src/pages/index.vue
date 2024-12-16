@@ -29,6 +29,10 @@ const scrollToNextSection = () => {
   }
 };
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 
 </script>
 
@@ -43,7 +47,7 @@ const scrollToNextSection = () => {
       <h2 class="font-calistoga text-sm text-White lg:text-lg">Développeur web</h2>
       <button
         @click="scrollToNextSection"
-        class="font-calistoga text-sm text-White bg-Black border-2 p-2 rounded-lg mt-4 z-10 absolute bottom-32 lg:right-4 lg:bottom-16 flex items-center justify-center"
+        class="font-calistoga text-sm text-White bg-Black border-2 p-2 rounded-lg mt-4 z-10 absolute bottom-32  lg:bottom-16 flex items-center justify-center"
         style="width: 50px; height: 50px; border-radius: 50%;">
         &#9660;
       </button>
@@ -104,6 +108,8 @@ const scrollToNextSection = () => {
       </div>
 
       <div class="my-24" >
+        <h2 class="text-center font-calistoga text-base lg:text-2xl mb-10 text-white">Mes Compétences</h2>
+
         <div class="z-20 flex justify-center space-x-16 pb-8">
           <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
             <img class="h-[100px] lg:h-[150px]" src="../assets/Img/css-3 1.png" alt="CSS" />
@@ -179,7 +185,7 @@ const scrollToNextSection = () => {
           >
             <div
               class="no-scrollbar h-[80vh] min-w-[80vw] flex-shrink-0 snap-center"
-              v-for="unProjet in projetslist"
+              v-for="unProjet in projetslist.slice(0, 3)"
               :key="unProjet.id"
             >
               <RouterLink :to="{ name: '/projets/[id]', params: { id: unProjet.id } }">
@@ -187,6 +193,9 @@ const scrollToNextSection = () => {
               </RouterLink>
             </div>
           </div>
+
+
+
 
           <button
             class="absolute right-5 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white bg-opacity-25 p-3 font-calistoga text-white shadow-lg hover:bg-gray-300 hover:text-black hover:bg-opacity-100"
@@ -222,6 +231,47 @@ const scrollToNextSection = () => {
             <cardProjet class="my-10" v-bind="projet" />
           </RouterLink>
         </div>
+        <RouterLink to="/projets">
+            <button
+              class="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-25 text-white font-calistoga py-2 px-4 rounded-lg shadow-lg hover:bg-gray-300 hover:bg-opacity-100 hover:text-black lg:text-base"
+            >
+              Voir plus de projets
+            </button>
+            </RouterLink>
     </section>
+    <section class="py-20 bg-black text-white">
+      <h2 class="text-center font-calistoga text-base lg:text-2xl mb-10">Mes soft Skills</h2>
+      <div class="flex flex-wrap justify-center space-y-8 lg:space-y-0 lg:space-x-16">
+        <div class="w-1/2 flex flex-col items-center mb-8 lg:mb-0 lg:w-auto transition-transform duration-300 hover:scale-110">
+          <img class="h-16 w-16 lg:h-24 lg:w-24 mb-4" src="/src/assets/Img/DossierIcons/Equipe.png" alt="IconeEquipe">
+          <p class="font-calistoga text-center">Travail en équipe</p>
+        </div>
+        <div class="w-1/2 flex flex-col items-center mb-8 lg:mb-0 lg:w-auto transition-transform duration-300 hover:scale-110">
+          <img class="h-16 w-16 lg:h-24 lg:w-24 mb-4" src="/src/assets/Img/DossierIcons/Agile.png" alt="IconeAgile">
+          <p class="font-calistoga text-center">Méthode agile (Scrum)</p>
+        </div>
+        <div class="w-1/2 flex flex-col items-center mb-8 lg:mb-0 lg:w-auto transition-transform duration-300 hover:scale-110">
+          <img class="h-16 w-16 lg:h-24 lg:w-24 mb-4" src="/src/assets/Img/DossierIcons/Lois.png" alt="IconeLois">
+          <p class="font-calistoga text-center">Respect des lois du numérique (RGPD, CNIL...)</p>
+        </div>
+        <div class="w-1/2 flex flex-col items-center mb-8 lg:mb-0 lg:w-auto transition-transform duration-300 hover:scale-110">
+          <img class="h-16 w-16 lg:h-24 lg:w-24 mb-4" src="/src/assets/Img/DossierIcons/Creatif.png" alt="IconeCreatif">
+          <p class="font-calistoga text-center">Créatif</p>
+        </div>
+        <div class="w-1/2 flex flex-col items-center lg:w-auto transition-transform duration-300 hover:scale-110">
+          <img class="h-16 w-16 lg:h-24 lg:w-24 mb-4" src="/src/assets/Img/DossierIcons/Adaptabilité.png" alt="IconeAdaptabilite">
+          <p class="font-calistoga text-center">Adaptabilité</p>
+        </div>
+      </div>
+    </section>
+    <div class="flex items-center justify-end bg-black py-10 pr-10">
+      <button
+      @click="scrollToTop"
+      class="font-calistoga text-sm text-White bg-Black border-2 p-2 rounded-lg z-10"
+      style="width: 50px; height: 50px; border-radius: 50%;"
+      >
+      &#9650;
+      </button>
+    </div>
   </div>
 </template>
