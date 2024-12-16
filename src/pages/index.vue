@@ -22,6 +22,14 @@ function scrollRight() {
   }
 }
 
+const scrollToNextSection = () => {
+  const nextSection = document.getElementById('next-section');
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+
 </script>
 
 <template>
@@ -33,6 +41,12 @@ function scrollRight() {
     >
       <h1 class="font-calistoga text-base text-White lg:text-xl">Matthis Boreaniz</h1>
       <h2 class="font-calistoga text-sm text-White lg:text-lg">Développeur web</h2>
+      <button
+        @click="scrollToNextSection"
+        class="font-calistoga text-sm text-White bg-Black border-2 p-2 rounded-lg mt-4 z-20 absolute bottom-32 lg:right-4 lg:bottom-16 flex items-center justify-center"
+        style="width: 50px; height: 50px; border-radius: 50%;">
+        &#9660;
+      </button>
     </div>
     <div class="hidden lg:block">
       <Elipse
@@ -48,7 +62,7 @@ function scrollRight() {
       />
     </div>
 
-    <section class="relative z-10 bg-black py-20" >
+    <section id="next-section" class="relative z-20 bg-black py-20" >
       <div id="apropos">
         <div
           class="mx-auto flex w-11/12 flex-col rounded-3xl bg-white bg-opacity-10 lg:w-2/4 lg:flex-row"
