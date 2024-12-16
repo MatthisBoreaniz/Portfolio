@@ -8,6 +8,7 @@ import ImgPb from './ImgPb.vue'
 const projetslist = await pb.collection('projets').getFullList()
 import { useRoute } from 'vue-router/auto'
 import CardProjetCarousel from '@/components/cardProjetCarousel.vue'
+import Footer from '@/components/Footer.vue'
 
 
 
@@ -45,4 +46,5 @@ import CardProjetCarousel from '@/components/cardProjetCarousel.vue'
     </div>
   </div>
 </div>
+<Footer/>
 </template>
