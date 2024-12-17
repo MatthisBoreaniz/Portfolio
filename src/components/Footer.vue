@@ -5,7 +5,7 @@
 <footer class="bg-black py-4 font-calistoga text-white border-t-2 border-white">
     <div class="container mx-auto text-center">
       <p>&copy; 2024 Matthis Boreaniz. Tous droits réservés</p>
-      <a href="/src/assets/Img/CV.pdf" download class="text-White underline hover:text-blue-600"
+      <a href="@/assets/Img/CV.pdf" download class="text-white underline hover:text-DeepBlue"
         >Télécharger mon CV</a
       >
       <section class="flex justify-center pt-2 gap-4">
