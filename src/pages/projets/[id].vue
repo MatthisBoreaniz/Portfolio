@@ -50,9 +50,9 @@ async function deleteProjetById() {
 <template>
   <div class="bg-animate">
       <HeaderMenu />
-    <div class="p-5 md:p-10 flex flex-col items-center">
-      <div class="flex  justify-center items-center gap-10">
-        <h1 class="text-center font-calistoga md:text-4xl text-white mb-4">
+    <div class=" md:p-10 flex flex-col items-center">
+      <div class="flex  justify-center items-center gap-10 pt-28 ">
+        <h1 class=" text-center font-calistoga md:text-4xl text-white mb-4">
           {{ Projets.titre }}
         </h1>
         <ImgPb :record="Projets" :filename="Projets.logo" class="max-w-16 max-h-16 md:max-w-24 md:max-h-24 object-cover mb-4" />

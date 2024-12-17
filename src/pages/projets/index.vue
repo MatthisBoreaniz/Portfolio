@@ -24,7 +24,7 @@ function edit () {
 
 <div class="bg-animate min-h-screen">
     <HeaderMenu />
-    <h1 class="font-calistoga text-base flex items-center justify-center text-white py-10">Mes projets </h1>
+    <h1 class="pt-28 font-calistoga text-base flex items-center justify-center text-white py-10">Mes projets </h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 p-4 justify-center">
         <div v-for="unProjet in listProjets" :key="unProjet.id" class="p-2 flex justify-center">
             <RouterLink :to="{

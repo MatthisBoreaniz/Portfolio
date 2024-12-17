@@ -57,7 +57,7 @@ const submitForm = async () => {
     class="min-h-screen overflow-x-hidden bg-black"
     style="min-height: 100vh; position: relative"
   >
-    <HeaderMenu class="z-50" />
+    <HeaderMenu />
 
     <div class="hidden lg:block">
       <Elipse
@@ -73,7 +73,7 @@ const submitForm = async () => {
       />
     </div>
 
-    <div class="z-10 flex w-full flex-col ">
+    <div class="pt-28 z-10 flex w-full flex-col ">
       <div class="mb-4 flex items-center">
         <h1
           class="inline-block whitespace-nowrap rounded-r-3xl bg-DeepBlue p-5 font-calistoga text-base text-white lg:text-lg"
