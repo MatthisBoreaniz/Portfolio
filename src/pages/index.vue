@@ -40,7 +40,7 @@ const scrollToTop = () => {
   <div class="bg-animate bg-smoke overflow-x-hidden" style="min-height: 100vh; position: relative">
     <HeaderMenu class="z-20" />
     <div
-      class="my-auto flex flex-col items-center justify-center space-y-1 overflow-x-hidden"
+      class="my-auto flex flex-col items-center justify-center space-y-1 overflow-x-hidden h-screen"
       style="min-height: calc(100vh - 60px); position: relative"
     >
       <h1 class="font-calistoga text-base text-White lg:text-xl">Matthis Boreaniz</h1>

@@ -49,7 +49,7 @@ async function deleteProjetById() {
 
 <template>
   <div class="bg-animate">
-    <HeaderMenu />
+      <HeaderMenu />
     <div class="p-5 md:p-10 flex flex-col items-center">
       <div class="flex  justify-center items-center gap-10">
         <h1 class="text-center font-calistoga md:text-4xl text-white mb-4">

@@ -8,11 +8,15 @@ const toggleMenu = () => {
   isActiveMenu.value = !isActiveMenu.value
 }
 
+const hasScrolled = ref(false)
+window.addEventListener('scroll', () => {
+  hasScrolled.value = window.scrollY > 0;
+});
 </script>
 
 <template>
   <nav
-    class="lg-w-full relative mx-auto flex w-full items-center justify-between space-x-5 p-3 lg:justify-between lg:rounded-none lg:p-5"
+    :class="['fixed lg-w-full mx-auto flex w-full items-center justify-between space-x-5 p-3 lg:justify-between lg:rounded-none lg:p-5 z-50', { 'bg-black bg-opacity-50': hasScrolled }]"
   >
     <div>
       <RouterLink to="/"><p class="mx-10 font-calistoga text-base text-white">MB</p></RouterLink>
