@@ -108,7 +108,7 @@ const scrollToTop = () => {
       </div>
 
       <div class="my-24" >
-        <h2 class="text-center font-calistoga text-base lg:text-2xl mb-10 text-white">Mes Compétences</h2>
+        <h2 class="text-center font-calistoga text-base lg:text-xl mb-10 text-white">Mes Compétences</h2>
 
         <div class="z-20 flex justify-center space-x-16 pb-8">
           <div class="group relative z-20 transition-transform duration-300 hover:scale-110">
@@ -240,7 +240,7 @@ const scrollToTop = () => {
             </RouterLink>
     </section>
     <section class="py-20 bg-black text-white">
-      <h2 class="text-center font-calistoga text-base lg:text-2xl mb-10">Mes soft Skills</h2>
+      <h2 class="text-center font-calistoga text-base lg:text-xl mb-10">Mes soft Skills</h2>
       <div class="flex flex-wrap justify-center space-y-8 lg:space-y-0 lg:space-x-16">
         <div class="w-1/2 flex flex-col items-center mb-8 lg:mb-0 lg:w-auto transition-transform duration-300 hover:scale-110">
           <img class="h-16 w-16 lg:h-24 lg:w-24 mb-4" src="/src/assets/Img/DossierIcons/Equipe.png" alt="IconeEquipe">
