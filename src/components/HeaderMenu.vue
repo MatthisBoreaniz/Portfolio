@@ -66,9 +66,6 @@ window.addEventListener('scroll', () => {
         <li>
           <RouterLink @click.prevent="isActiveMenu = false" :to="{path: '/', hash: '#apropos'}">À propos</RouterLink>
         </li>
-        <li>
-          <RouterLink @click.prevent="isActiveMenu = false" to="/connexion">Connexion</RouterLink>
-        </li>
       </ul>
     </div>
   </nav>
