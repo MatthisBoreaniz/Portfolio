@@ -169,6 +169,45 @@ const scrollToTop = () => {
           </div>
         </div>
       </div>
+      <div class="flex flex-col md:flex-row gap-6 p-4 text-white font-calistoga">
+  <!-- Cadre Communication -->
+  <div class="flex-1 border-2 border-white p-6 rounded-lg shadow-md overflow-y-auto max-h-64 z-20">
+    <div class="flex items-center gap-4 mb-4">
+      <h2 class="lg:text-base text-sm font-semibold border-b-2 border-gray-300 pb-2 overflow-x-hidden">Compétences en Communication</h2>
+    </div>
+    <div class="flex items-center justify-around">
+      <ul class="list-none space-y-2 max-h-32 overflow-y-auto overflow-x-hidden">
+        <li>Notion</li>
+        <li>Gantt</li>
+        <li>SWOT</li>
+        <li>Deeplist</li>
+        <li>Trello</li>
+        <li title="Plus de compétences disponibles">...</li>
+      </ul>
+      <img src="/src/assets/Img/javascript-1 1.png" alt="Communication" class="w-16 h-16 hover:scale-110 transition-transform">
+    </div>
+  </div>
+
+  <!-- Cadre Design -->
+  <div class="flex-1 border-2 border-white p-6 rounded-lg shadow-md overflow-y-auto max-h-64">
+    <div class="flex items-center gap-4 mb-4">
+      <h2 class="lg:text-base text-sm font-semibold border-b-2 border-gray-300 pb-2">Compétences en Design</h2>
+    </div>
+    <div class="flex items-center justify-around">
+      <ul class="list-none space-y-2 max-h-32 overflow-y-auto overflow-x-hidden">
+        <li>Illustrator</li>
+        <li>Figma</li>
+        <li>Photoshop</li>
+        <li>InDesign</li>
+        <li>Animation SVG</li>
+        <li title="Plus de compétences disponibles">...</li>
+      </ul>
+      <img src="/src/assets/Img/javascript-1 1.png" alt="Design" class="w-16 h-16 hover:scale-110 transition-transform">
+    </div>
+  </div>
+</div>
+
+
       <h2 class="text-center font-calistoga text-base text-White lg:text-xl">Mes Projets</h2>
       <div class="relative hidden lg:block">
         <div class="no-scrollbar z-10 flex h-screen items-center justify-center px-5">
@@ -275,3 +314,23 @@ const scrollToTop = () => {
     </div>
   </div>
 </template>
+
+<style>
+::-webkit-scrollbar {
+  width: 8px; /* Largeur de la scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Couleur de l'arrière-plan */
+  border-radius: 4px; /* Coins arrondis */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la barre de défilement */
+  border-radius: 4px; /* Coins arrondis */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur au survol */
+}
+</style>
