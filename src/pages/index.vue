@@ -184,7 +184,7 @@ const scrollToTop = () => {
         <li>Trello</li>
         <li title="Plus de compétences disponibles">...</li>
       </ul>
-      <img src="/src/assets/Img/javascript-1 1.png" alt="Communication" class="w-16 h-16 hover:scale-110 transition-transform">
+      <img src="/src/assets/Img/notionlogo.webp" alt="Communication" class="w-16 h-16 hover:scale-110 transition-transform">
     </div>
   </div>
 
@@ -202,7 +202,7 @@ const scrollToTop = () => {
         <li>Animation SVG</li>
         <li title="Plus de compétences disponibles">...</li>
       </ul>
-      <img src="/src/assets/Img/javascript-1 1.png" alt="Design" class="w-16 h-16 hover:scale-110 transition-transform">
+      <img src="/src/assets/Img/logoFigma.png" alt="Design" class="w-16 h-24 hover:scale-110 transition-transform">
     </div>
   </div>
 </div>
