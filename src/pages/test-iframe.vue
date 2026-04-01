@@ -3,8 +3,9 @@
     <div class="goux-video-card">
         <div class="goux-video-container">
             <iframe 
-                src="https://www.canal-u.tv/node/105341/embed" 
+                src="https://www.canal-u.tv/video/embed/105341" 
                 frameborder="0" 
+                scrolling="no"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
@@ -20,8 +21,9 @@
     <div class="goux-video-card">
         <div class="goux-video-container">
             <iframe 
-                src="https://www.canal-u.tv/node/105345/embed" 
+                src="https://www.canal-u.tv/video/embed/105345" 
                 frameborder="0" 
+                scrolling="no"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
             </iframe>
