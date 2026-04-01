@@ -34,56 +34,6 @@
     </div>
 </div>
 
-.goux-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.goux-video-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.goux-video-container {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Garde le format vidéo standard */
-    margin-bottom: 20px;
-    background-color: #000;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.goux-video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.goux-video-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 10px !important;
-}
-
-.goux-video-content p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-@media (max-width: 768px) {
-    .goux-cards-grid {
-        grid-template-columns: 1fr;
-    }
-}
 </template>
 
 <style>
@@ -137,4 +87,4 @@
         grid-template-columns: 1fr;
     }
 }
-<style>
+</style>
